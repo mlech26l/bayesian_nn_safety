@@ -48,6 +48,14 @@ python3 run_mip.py --env pend --first_layer
 python3 run_car_mip.py --bootstrap
 ```
 
+## Additional information
+
+The networks with Bayesian weights in the second hidden layer only have a Guassian distribution with a standard deviation of 0.1, while the networks with both layers Bayesian have a standard deviation of 0.05.
+
+Here is an example of how the positive invariant changes during the learner-verifier training procedure:
+
+![alt](learn.gif)
+
 ## Citation
 
 ```bib
