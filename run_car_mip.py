@@ -429,7 +429,7 @@ def sample_unsafe_region_car(env, n=500):
     while len(unsafes) < n:
         px = default_rng.integers(-env.bound_x, env.bound_x + 1)
         ax = default_rng.integers(-env.bound_x, env.bound_x + 1)
-        ay = 0
+        ay = 0 # there is a typo in the supplementary materials -> ay = 0 is unsafe (instead of ay=5)
         unsafes.append(np.array([px, ax, ay]))
     return np.stack(unsafes, axis=0)
 
