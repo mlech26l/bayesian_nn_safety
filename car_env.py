@@ -43,6 +43,7 @@ class CarEnv(gym.Env):
         reward += 0.1 * np.abs(px - ax)
 
         if ay <= 0:
+            # there is a typo in the supplementary materials -> ay = 0 is unsafe (instead of ay=5)
             done = True
             if np.abs(px - ax) <= self.safety_ball:
                 reward -= 100
